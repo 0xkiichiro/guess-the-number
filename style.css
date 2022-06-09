@@ -1,0 +1,40 @@
+body {
+  background-color: #212529;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10rem;
+}
+
+.nes-container {
+  width: 1000px;
+}
+
+section.nes-container input {
+  width: 40%;
+}
+
+.container .game {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem;
+}
+
+header {
+  height: 10vh;
+  padding-right: 1rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: lightcoral;
+}
+
+span {
+  color: white;
+}
