@@ -17,7 +17,7 @@
       <h3>made by <span>0xkiichiro</span></h1>
     </header>
     <div class="container">
-      <section class="nes-container is-dark">
+      <section class="nes-container is-dark welcome">
         <section class="message-list">
           <section class="message -left">
             <i class="nes-bcrikko"></i>
@@ -43,28 +43,29 @@
             <i class="nes-bcrikko"></i>
           </section>
         </section>
-        <button class="nes-btn is-warning">Press to start the game!</button>
+        <button class="nes-btn is-warning start-btn">Press to start the game!</button>
       </section>
       <section class="nes-container is-dark game">
         <section class="left">
           <p>Make a guess!</p>
           <input
-            class="nes-input is-warning"
+            class="nes-input is-warning input"
             type="number"
             name="input"
             id="input"
           />
-          <button class="nes-btn is-success">Go!</button>
-          <button class="nes-btn is-error">Reset.</button>
+          <button class="nes-btn is-success guess-btn">Go!</button>
+          <button class="nes-btn is-error reset-btn">Reset.</button>
         </section>
         <section class="message -right">
           <!-- Balloon -->
           <div class="nes-balloon from-right is-dark">
-            <p>You should go up!</p>
+            <p class="directions">Start by entering a value between 1 to 100.</p>
           </div>
           <i class="nes-bcrikko"></i>
         </section>
       </section>
     </div>
+    <script src="./app.js"></script>
   </body>
 </html>
