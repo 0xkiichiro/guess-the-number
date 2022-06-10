@@ -28,7 +28,7 @@ section.nes-container input {
 
 header {
   height: 10vh;
-  padding-right: 1rem;
+  padding-right: 3rem;
   display: flex;
   justify-content: flex-end;
   align-items: center;
