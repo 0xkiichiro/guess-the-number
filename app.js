@@ -14,6 +14,7 @@ document.querySelector("body").addEventListener("click", (event) => {
   if (event.target.classList.contains("start-btn")) {
     welcome.style.display = "none";
     game.style.display = "block";
+    generateRandomNumber();
   }
   if (event.target.classList.contains("guess-btn")) {
     guess();
@@ -27,16 +28,14 @@ document.querySelector("body").addEventListener("click", (event) => {
 
 const generateRandomNumber = function () {
   winningNumber = (Math.random() * 100).toFixed(0);
-  console.log(winningNumber);
 };
-
-generateRandomNumber();
 
 const guess = function () {
   if (lives > 0) {
     lives--;
-    if (input.value === winningNumber) {
-      alert("you have won!");
+    if (input.value < 0 || input.value > 100 || !input.value) {
+      directions.innerText = `Enter a value between 0-100! Amount of tries left:${lives}`;
+    } else if (input.value === winningNumber) {
       directions.innerText = "You've won!";
     } else if (input.value >= winningNumber) {
       directions.innerText = `You should go lower! Amount of tries left:${lives}`;
@@ -44,7 +43,6 @@ const guess = function () {
       directions.innerText = `You should go higher! Amount of tries left:${lives}`;
     }
   } else if (lives <= 0) {
-    alert("you have lost!");
     directions.innerText = "You've lost!";
   }
 };
@@ -52,6 +50,8 @@ const guess = function () {
 const reset = function () {
   lives = 5;
   generateRandomNumber();
+  directions.innerText = `Start by entering a value between 1 to 100.`;
+  input.value = "";
 };
 
 //!onload
