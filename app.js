@@ -24,6 +24,23 @@ document.querySelector("body").addEventListener("click", (event) => {
   }
 });
 
+//! capture keydown
+
+document.querySelector("body").addEventListener("keydown", (key) => {
+  if (key.keyCode === 13 && welcome.style.display !== "none") {
+    welcome.style.display = "none";
+    game.style.display = "block";
+    generateRandomNumber();
+  } else if (
+    key.keyCode === 13 &&
+    directions.innerText == "You've lost! Want to try again?"
+  ) {
+    reset();
+  } else if (key.keyCode === 13 && welcome.style.display === "none") {
+    guess();
+  }
+});
+
 //! generate random number
 
 const generateRandomNumber = function () {
@@ -43,7 +60,7 @@ const guess = function () {
       directions.innerText = `You should go higher! Amount of tries left:${lives}`;
     }
   } else if (lives <= 0) {
-    directions.innerText = "You've lost!";
+    directions.innerText = "You've lost! Want to try again?";
   }
 };
 
