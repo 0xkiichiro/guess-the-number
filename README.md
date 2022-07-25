@@ -10,7 +10,7 @@ NES.css Link: https://github.com/nostalgic-css/NES.css
 
 ## Check the full-functioning site at: https://0xkiichiro.github.io/habit-tracker/
 
-![]()
+![](https://github.com/0xkiichiro/guess-the-number/blob/master/Animation.gif)
 
 ## Comments
 
